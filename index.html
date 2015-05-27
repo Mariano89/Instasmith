@@ -4,12 +4,14 @@
 	<head>
 		<title>InstaSmith</title>
 		<link type="text/css" rel="stylesheet" href="main.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="js/main.js"></script>
+
 	</head>
 	<body>
 		<div class="loginBox">
 			<header>InstaSmith</header>
-				<form id="form" onsubmit="myFunction()">
+				<form id="form">
 					<div class="fields">
 					<p class="userName">Username:</p>
 					<input id="user" class="userName">
@@ -20,11 +22,13 @@
 
 					<p class="password">Password:</p>
 					<input id="pw" class="password">
-				</form>
+				
 				<div class="forgot-pw-login">
 					<a href="#" class="forgot-pw">Forgot your password?</a>
-					<button type="submit" class="login">Log in</button>
+					<input type="submit" name = "Submit" value="Submit" class="login">
 				</div>
+				</form>
+				
 			</div>
 
 		</div>
