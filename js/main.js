@@ -4,14 +4,17 @@ $(document).ready(function(){
 	// console.log("ready");
 	$(".login").on('click',function(e){
 		username = $('#user').val();
-		password = $('#pw').val();
+		pw = $('#pw').val();
 		// console.log(username, password);
 		e.preventDefault();
 		// console.log(users[username]);
 		var userCheck = function(){
-			if(users.hasOwnProperty(username)){
+			if(users.hasOwnProperty(username) && users[username]["password"] === pw){
 				console.log("true");
-			};
+			}
+			else {
+				console.log("nope");
+			}
 		}();
 		// userCheck(users[username]);
 	});
