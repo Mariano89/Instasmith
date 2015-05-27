@@ -1,21 +1,46 @@
-// window.onload=function(){
-
-	// var form = document.getElementById('form');
-	// var user = document.getElementById('user').value;
-	// function myFunction(){
-	// 	// var variable = user;
-	// 	alert(user);
-	//}
-// }
 $(document).ready(function(){
-	console.log("ready");
+	var username;
+	var password;
+	// console.log("ready");
 	$(".login").on('click',function(e){
-		console.log("still ready");
-		var UserName = $('#user').val();
-		var PassWord = $('#pw').val();
-		console.log(UserName, PassWord);
+		username = $('#user').val();
+		password = $('#pw').val();
+		// console.log(username, password);
 		e.preventDefault();
-	})
+		// console.log(users[username]);
+		var userCheck = function(){
+			if(users.hasOwnProperty(username)){
+				console.log("true");
+			};
+		}();
+		// userCheck(users[username]);
+	});
 	
+	var users = {
+		Travis: {
+			password: 'travis123'
+		},
+		Mariano: {
+			password: 'mariano123'
+		},
+		David: {
+			password: 'david123'
+		},
+		Victoria: {
+			password: 'victoria123'
+		},
+		Will: {
+			password: 'will123'
+		},
+		Alex: {
+			password: 'alex123'
+		}
+	};
+
+	// console.log(users['Travis']);
+
+// console.log(users['Travis']['password']);
+
+
 });
 	
