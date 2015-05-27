@@ -4,24 +4,26 @@
 	<head>
 		<title>InstaSmith</title>
 		<link type="text/css" rel="stylesheet" href="main.css">
+		<script src="js/main.js"></script>
 	</head>
 	<body>
 		<div class="loginBox">
 			<header>InstaSmith</header>
-			<div class="fields">
-				<p class="userName">Username:</p>
-				<input class="userName">
-			
-				<br>
-				<br>
-			
+				<form id="form" onsubmit="myFunction()">
+					<div class="fields">
+					<p class="userName">Username:</p>
+					<input id="user" class="userName">
+				
+					<br>
+					<br>
+				
 
-				<p class="password">Password:</p>
-				<input class="password">
-
+					<p class="password">Password:</p>
+					<input id="pw" class="password">
+				</form>
 				<div class="forgot-pw-login">
 					<a href="#" class="forgot-pw">Forgot your password?</a>
-					<button class="login">Log in</button>
+					<button type="submit" class="login">Log in</button>
 				</div>
 			</div>
 
