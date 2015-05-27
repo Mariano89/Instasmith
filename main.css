@@ -1,3 +1,52 @@
-body{
+.loginBox{
+	margin: 0 auto;
+	margin-top: 200px;
+	background-color: red;
+	width:450px;
+	height:200px;
+	border: 1px solid black;
+}
 
+header{
+	text-align: center;
+	border-bottom: 1px solid black;
+	height: 40px;
+	background-color: #3b729c;
+
+}
+
+.userName {
+	display:inline;
+	text-align: center;	
+}
+
+.password {
+	display:inline-block;
+
+}
+
+.fields{
+	padding:55px 0 0 83px;
+	height:100%;
+	display:block;
+	margin:0 auto;
+	background-color: #fdfdfd;
+	
+}
+
+.forgot-pw-login {
+	margin-top: 20px;
+}
+
+.forgot-pw {
+
+}
+
+.login {
+	margin-left: 75px;
+}
+
+.account {
+	margin-top: 80px;
+	text-align: center;
 }
