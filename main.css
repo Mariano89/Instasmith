@@ -4,26 +4,37 @@ html, body, h1, h2, h3, h4, ul, ol, li, p, a {
   margin: 0;
  }
 
-@font-face {
+body {
+	line-height: 20px;
+}
+/*@font-face {
 	font-family: Billabong;
 	src: url("billabong.ttf");
 }
-
+*/
 .loginBox{
 	margin: 0 auto;
 	margin-top: 200px;
 	width:450px;
 	height:200px;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
+	/*border-radius: 4px 4px 0 0;*/
 }
 
-header{
+header {
 	text-align: center;
+	position: relative;
+	display: block;
+	margin: -1px -1px 1px;
 	border-bottom: 1px solid black;
-	height: 40px;
-	background-color: #3b729c;
+	height: 44px;
+	background-color: #517fa4;
 	line-height: 40px;
-
+	border-radius: 4px 4px 0 0;
+	border: 1px solid #1c5380;
+	font-size: 18px;
+	/*background: url("https://instagramstatic-a.akamaihd.net/bluebar/660508e/images/branding/new-logo.png") no-repeat 0 0;*/
+	/*box-shadow: 0 -1px 0 #06365f inset, 0 1px 0 rgba(255,255,255, .2).inset;*/
 }
 
 .userName {
@@ -36,6 +47,10 @@ header{
 
 }
 
+#user {
+	/*padding: 11px */
+}
+
 .fields{
 	/*padding:55px 0 0 83px;*/
 	padding-left: 100px;
@@ -44,7 +59,6 @@ header{
 	/*display:block;*/
 	/*margin:0 auto;*/
 	background-color: #fdfdfd;
-	
 }
 
 .forgot-pw-login {

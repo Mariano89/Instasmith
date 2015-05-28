@@ -1,48 +1,68 @@
 $(document).ready(function(){
 	var username;
 	var password;
-	// console.log("ready");
+
+
+
 	$(".login").on('click',function(e){
-		username = $('#user').val();
+		username = $('#user').val().toLowerCase();
+		console.log(username);
 		pw = $('#pw').val();
-		// console.log(username, password);
 		e.preventDefault();
-		// console.log(users[username]);
 		var userCheck = function(){
 			if(users.hasOwnProperty(username) && users[username]["password"] === pw){
-				console.log("true");
+				// console.log("true");
+				window.location.href = "home.html";
+				// HomePics();
 			}
 			else {
 				console.log("nope");
+				alert("nope");
+
 			}
 		}();
-		// userCheck(users[username]);
 	});
 	
 	var users = {
-		Travis: {
+		travis: {
 			password: 'travis123'
 		},
-		Mariano: {
+		mariano: {
 			password: 'mariano123'
 		},
-		David: {
+		david: {
 			password: 'david123'
 		},
-		Victoria: {
+		victoria: {
 			password: 'victoria123'
 		},
-		Will: {
+		will: {
 			password: 'will123'
 		},
-		Alex: {
+		alex: {
 			password: 'alex123'
+		},
+		a: {
+			password: 'a'
 		}
 	};
 
-	// console.log(users['Travis']);
 
-// console.log(users['Travis']['password']);
+	$.getJSON( "https://codesmith-precourse.firebaseio.com/instagram/-JqL35o8u6t3dTQaFXSV.json", function( data ) {
+	  var items = [];
+	  $.each( data, function( key, val ) {
+	    items.push( "<img id='" + key + "' "+"src='"+val+"'>");
+	  });
+	 
+	  $("<ul/>", {
+	    "class": "my-new-list",
+	    html: items.join("")
+	 	 }).appendTo( ".home-screen-pics" );
+	});
+
+
+
+
 
 
 });

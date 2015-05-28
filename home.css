@@ -1,0 +1,28 @@
+html, body, h1, h2, h3, h4, ul, ol, li, p, a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+ }
+
+ body{
+ 	background-color: #dedfe0;
+ }
+
+ .home-header{
+ 	text-align: center;
+ 	width:100%;
+ 	height: 40px;
+ 	background-color: #517fa4;
+ 	line-height:37px;
+ 	color:white;
+ }
+
+ .my-new-list > img {
+ 	display: block;
+ 	margin: 0 auto;
+ 	border: 5px solid gray;
+ 	margin-top: 20px;
+ 	width: 300px;
+ 	height: 400px;
+ }
+
