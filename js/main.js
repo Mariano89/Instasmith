@@ -52,12 +52,16 @@ $(document).ready(function(){
 	  var items = [];
 	  $.each( data, function( key, val ) {
 	    items.push( "<img id='" + key + "' "+"src='"+val+"'>");
+	    items.push("<div class='likeBox'></div>");
+	  
+	  // console.log(items[key], items[val]);
 	  });
+	 $('<ul class="my-new-list"></ul>').append(items.join("")).appendTo('.home-screen-pics');
 	 
-	  $("<ul/>", {
-	    "class": "my-new-list",
-	    html: items.join("")
-	 	 }).appendTo( ".home-screen-pics" );
+	  // $("<ul/>", {
+	  //   "class": "my-new-list",
+	  //   html: items.join("")
+	 	//  }).appendTo( ".home-screen-pics" );
 	});
 
 

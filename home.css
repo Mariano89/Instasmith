@@ -26,3 +26,10 @@ html, body, h1, h2, h3, h4, ul, ol, li, p, a {
  	height: 400px;
  }
 
+.likeBox{
+	width: 300px;
+	height: 40px;
+	border: 1px solid black;
+	position: relative;
+	margin: 0 auto;
+}
