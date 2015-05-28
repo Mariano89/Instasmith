@@ -33,6 +33,8 @@ header {
 	border-radius: 4px 4px 0 0;
 	border: 1px solid #1c5380;
 	font-size: 18px;
+	font-family: 'Grant Hotel', cursive;
+	color: white;
 	/*background: url("https://instagramstatic-a.akamaihd.net/bluebar/660508e/images/branding/new-logo.png") no-repeat 0 0;*/
 	/*box-shadow: 0 -1px 0 #06365f inset, 0 1px 0 rgba(255,255,255, .2).inset;*/
 }
