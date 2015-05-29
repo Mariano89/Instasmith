@@ -1,4 +1,3 @@
-	
 $(document).ready(function(){
 	var username;
 	var password;
@@ -57,17 +56,17 @@ $(document).ready(function(){
 
 
 	$.getJSON( "https://codesmith-precourse.firebaseio.com/instagram/-JqL35o8u6t3dTQaFXSV.json", function( data ) {
+
 	  items = [];
 	  $.each( data, function( key, val ) {
-	    items.push( "<img id='" +key + "' "+"src='"+val+"'>");
+	    items.push( "<img id='" + key + "' " + "src='"+ val + "'>");
 	    items.push("<div class='likeBox'><div class='likeIcon'></div></div>");
 	  	items.push("<div class='comment_display'></div>");
 	  	items.push("<form><input class='comment_input'></form>");
-	  	// makeArrays(commentsArray, arrayLength(items[key]));
 	  // console.log(items[key]);
 	  });
-	  // console.log(items[key]);
-	  // console.log(arrayLength(items[key]));
+	  	makeArrays(commentsArray, data.length);
+	  	console.log(commentsArray);
 	 $('<ul class="my-new-list"></ul>').append(items.join("")).appendTo('.home-screen-pics');
 	 
 	  // $("<ul/>", {
@@ -76,14 +75,9 @@ $(document).ready(function(){
 	 	//  }).appendTo( ".home-screen-pics" );
 	});
 
-	// items.length
-
-	function arrayLength(arr){
-		return arr.length;
-	}
 
 	function makeArrays(arr, len){
-		var blank = [];
+		var blank = ["a","b","c"];
 		for(var i = 0; i < len; i++){
 			arr.push(blank);
 		}
@@ -121,21 +115,14 @@ $(document).ready(function(){
 	getPicture(current_user);
 	
 	var p = document.createElement('p');
-		function welcomeUser(user){
-			if(current_user){
-			p.innerHTML = "Welcome " +  current_user + "!";
-			document.getElementById('img_div').appendChild(p);
+	function welcomeUser(user){
+		if(current_user){
+		p.innerHTML = "Welcome " +  current_user + "!";
+		document.getElementById('img_div').appendChild(p);		
 		}
-		
 	}
 
 		welcomeUser(current_user);
-
-
-	// $(".user").append(pictureArray).appendTo("<div class='home-screen-pics'></div>");
-
-
-
 
 
 
