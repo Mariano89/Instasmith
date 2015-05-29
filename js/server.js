@@ -2,10 +2,8 @@ var http = require('http');
 var fs = require('fs');
 
 
- http.createServer(function(request, response){
- 	// var home = '../home.html';
- 	// var mainStyle = '../main.css';
- 	// var homeStyle = '../home.css';
+http.createServer(function(request, response){
+
  	console.log(request);
 	if(request.url == '/'){
 	response.writeHead(200, {
@@ -15,13 +13,13 @@ var fs = require('fs');
 	fs.readFile('../index.html', function(error, contents){
 		response.write(contents);
 		response.end();
-	});
-} else {
+		});
+	} 	else {
 	fs.readFile('../' + request.url, function(error, contents){
 		response.write(contents);
 		response.end();
-});
-}
-}).listen(8080);
-
+		});
+	}
+}).listen(process.env.PORT || 8080);
+console.log(process);
 
