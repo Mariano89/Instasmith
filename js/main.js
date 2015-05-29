@@ -157,7 +157,9 @@ $(document).ready(function(){
 		welcomeUser(current_user);
 
 		$('body').on('dblclick','img', function(){
-				$('.likeIcon').toggleClass('likeIcon2');
+				//console.log($(this), "This");
+				//console.log($(this).siblings('.likeBox').children());
+				$(this).siblings('.likeBox').children().toggleClass('likeIcon2');
 			// 	if($('.likeIcon').css('background-color','grey')){
 			// 	$('.likeIcon').addClass('background-color','red');
 			// }
