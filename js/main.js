@@ -63,7 +63,7 @@ $(document).ready(function(){
 	    items.push( "<img id='" + key + "' " + "src='"+ val + "'>");
 	    items.push("<div class='likeBox'><div class='likeIcon'></div></div>");
 	  	items.push("<div class='comment_display'></div>");
-	  	items.push("<input class='comment_input'data-value='" + key + "'/><button name='Submit' value='Submit' class='comment_button' data-value='" + key + "'/>");
+	  	items.push("<input class='comment_input'data-value='" + key + "'/><button name='Submit' value='Submit' class='comment_button' data-value='" + key + "'>Send</button>");
 	  	items.push("</div>");
 	  // console.log(items[key]);
 	  });
