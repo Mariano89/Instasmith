@@ -63,7 +63,7 @@ $(document).ready(function(){
 	    items.push( "<img id='" + key + "' " + "src='"+ val + "'>");
 	    items.push("<div class='likeBox'><div class='likeIcon'></div></div>");
 	  	items.push("<div class='comment_display'></div>");
-	  	items.push("<input class='comment_input'/><button name='Submit' value='Submit' class='comment_button' data-value='" + key + "'/>");
+	  	items.push("<input class='comment_input'data-value='" + key + "'/><button name='Submit' value='Submit' class='comment_button' data-value='" + key + "'/>");
 	  	items.push("</div>");
 	  // console.log(items[key]);
 	  });
@@ -83,22 +83,26 @@ $(document).ready(function(){
 
 	//creates P element, attaches comment input to it, and attatches it to the commentdisplay
 
-	var comment_text = document.createElement('p');
+	//var comment_text = document.createElement('p');
 	$('body').on('click', '.comment_button',function(){
 
-		var x = $(".comment_input").val();
-		console.log(comment_text);
-		comment_text.innerHTML = x;
-		console.log(x);
+		var x = $(this).siblings(".comment_input").val();
+
+		console.log($(x).val());
+		//console.log(comment_text);
+	//	comment_text.innerHTML = x;
+		//console.log(x);
 		// var el = document.getElementsByClassName('.comment_display');
-		console.log("data" +$(this).data('value'));
+		//console.log("data", $(this).data('value'));
 		// var y = this.closest(el);
 		// $(this).x.append(y);
 		
-		//$(this).data('value')
-
+		console.log($(this).data('value'));
+		console.log("x", x);
+		console.log("comment display", $(this).siblings('.comment_display'));
 		//this code will display comments to all pictures
-		$(this).prev().siblings('.comment_display').empty().append(x);
+		console.log($(this).data('value'));
+		$(this).siblings('.comment_display').append(current_user+ ": " + x + "<br>");
 		$('.comment_input').val('');
 	  });
 
