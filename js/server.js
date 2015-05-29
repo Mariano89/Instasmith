@@ -1,21 +1,31 @@
+console.log("loaded serverjs");
+
 var http = require('http');
 var fs = require('fs');
 
 
 http.createServer(function(request, response){
 
- 	console.log(request);
+ 	// console.log(request);
 	if(request.url == '/'){
 	response.writeHead(200, {
 		'Content-Type': 'text/html'});
 
 	console.log(request.url);
-	fs.readFile('../index.html', function(error, contents){
+	fs.readFile('index.html', function(error, contents){
+		if(error){
+			console.error(error, "!!!!");
+		}
+		console.log(typeof contents, "contents");
 		response.write(contents);
+
 		response.end();
 		});
 	} 	else {
-	fs.readFile('../' + request.url, function(error, contents){
+	fs.readFile('./' + request.url, function(error, contents){
+		if(error){
+			console.error(error, "!!!!");
+		}
 		response.write(contents);
 		response.end();
 		});
