@@ -6,7 +6,7 @@ var fs = require('fs');
  	// var home = '../home.html';
  	// var mainStyle = '../main.css';
  	// var homeStyle = '../home.css';
- 	
+ 	console.log(request);
 	if(request.url == '/'){
 	response.writeHead(200, {
 		'Content-Type': 'text/html'});

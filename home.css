@@ -19,7 +19,8 @@ html, body, h1, h2, h3, h4, ul, ol, li, p, a {
  }
 
 .home-header p, .home-header img, .home-header h1{
-display:inline;
+/*display:inline;*/
+position: absolute;
 
 }
 
@@ -65,11 +66,30 @@ display:inline;
 
 }
 
-#img_div{
-	/*display:inline;*/
+.likeIcon2{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: red;
+
+}
+#img_div > img{
+	display:inline;
 	width: 100px;
 	height: 35px;
+	margin-left: 20%;
 	/*background-color: black;*/
+}
+
+#img_div >p {
+	margin-left: 80%;
+
+}
+
+.home-header > .title {
+	margin-left: 47%;
+	font-family: "Grand Hotel", cursive;
+
 }
 
 

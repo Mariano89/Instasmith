@@ -23,10 +23,10 @@ $(document).ready(function(){
 		}();
 	});
 	
-	$('.test').on('click', function(){
-		console.log(document.cookie, "cookie");
-		console.log("current user", current_user);
-	});
+	// $('.test').on('click', function(){
+	// 	console.log(document.cookie, "cookie");
+	// 	console.log("current user", current_user);
+	// });
 
 
 
@@ -62,22 +62,44 @@ $(document).ready(function(){
 	    items.push( "<img id='" + key + "' " + "src='"+ val + "'>");
 	    items.push("<div class='likeBox'><div class='likeIcon'></div></div>");
 	  	items.push("<div class='comment_display'></div>");
-	  	items.push("<form><input class='comment_input'></form>");
+	  	items.push("<input class='comment_input'/><button name='Submit' value='Submit' class='comment_button' data-value='" + key + "'/>");
 	  // console.log(items[key]);
 	  });
 	  	makeArrays(commentsArray, data.length);
+	  	
+
 	  	console.log(commentsArray);
 	 $('<ul class="my-new-list"></ul>').append(items.join("")).appendTo('.home-screen-pics');
 	 
+
+
 	  // $("<ul/>", {
 	  //   "class": "my-new-list",
 	  //   html: items.join("")
 	 	//  }).appendTo( ".home-screen-pics" );
 	});
 
+	//creates P element, attaches comment input to it, and attatches it to the commentdisplay
+
+	var comment_text = document.createElement('p');
+	$('body').on('click', '.comment_button',function(){
+
+		var x = $(".comment_input").val();
+		console.log(comment_text);
+		comment_text.innerHTML = x;
+		console.log(x);
+		// var el = document.getElementsByClassName('.comment_display');
+		console.log($(this).data('value'));
+		// var y = this.closest(el);
+		// $(this).x.append(y);
+		$(this).prev().siblings('.comment_display').empty().append(x);
+		$('.comment_input').val('');
+	  });
+
+
 
 	function makeArrays(arr, len){
-		var blank = ["a","b","c"];
+		var blank = [];
 		for(var i = 0; i < len; i++){
 			arr.push(blank);
 		}
@@ -117,13 +139,23 @@ $(document).ready(function(){
 	var p = document.createElement('p');
 	function welcomeUser(user){
 		if(current_user){
-		p.innerHTML = "Welcome " +  current_user + "!";
+		p.innerHTML = "Welcome, " +  current_user + "!";
 		document.getElementById('img_div').appendChild(p);		
 		}
 	}
 
 		welcomeUser(current_user);
 
+		$('body').on('dblclick','img', function(){
+				$('.likeIcon').toggleClass('likeIcon2');
+			// 	if($('.likeIcon').css('background-color','grey')){
+			// 	$('.likeIcon').addClass('background-color','red');
+			// }
+				
+			// 	else if($('.likeIcon').addClass('background-color','red')) {
+			// 		$('.likeIcon').css('background-color','grey');
+			// 	}
+		});
 
 
 });
