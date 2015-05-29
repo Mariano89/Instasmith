@@ -2,31 +2,24 @@
 $(document).ready(function(){
 	var username;
 	var password;
-	//document.cookie = "this is saved";
+	var items;
+	var commentsArray = [];
+
 	var current_user = document.cookie; 
-	//console.log("cookie", current_user);
 
 	$(".login").on('click',function(e){
 		username = $('#user').val().toLowerCase();
-		//console.log(username);
 		pw = $('#pw').val();
 		e.preventDefault();
 		
 		var userCheck = function(){
 			if(users.hasOwnProperty(username) && users[username]["password"] === pw){
 				document.cookie = username;
-				//console.log("document.cookie", document.cookie);
-				//users['current'] = users['current'][username];
-				//$('.hello').appendTo('Welcome ' + users[username]);
 				window.location.href = "home.html";
-				//alert(document.cookie);
-
-				// HomePics();
 			}
 			else {
 				console.log("nope");
 				alert("nope");
-
 			}
 		}();
 	});
@@ -64,15 +57,17 @@ $(document).ready(function(){
 
 
 	$.getJSON( "https://codesmith-precourse.firebaseio.com/instagram/-JqL35o8u6t3dTQaFXSV.json", function( data ) {
-	  var items = [];
+	  items = [];
 	  $.each( data, function( key, val ) {
-	    items.push( "<img id='" + key + "' "+"src='"+val+"'>");
+	    items.push( "<img id='" +key + "' "+"src='"+val+"'>");
 	    items.push("<div class='likeBox'><div class='likeIcon'></div></div>");
 	  	items.push("<div class='comment_display'></div>");
-	  	items.push("<input class='comment_input'>");
-	  	
-	  // console.log(items[key], items[val]);
+	  	items.push("<form><input class='comment_input'></form>");
+	  	// makeArrays(commentsArray, arrayLength(items[key]));
+	  // console.log(items[key]);
 	  });
+	  // console.log(items[key]);
+	  // console.log(arrayLength(items[key]));
 	 $('<ul class="my-new-list"></ul>').append(items.join("")).appendTo('.home-screen-pics');
 	 
 	  // $("<ul/>", {
@@ -80,6 +75,20 @@ $(document).ready(function(){
 	  //   html: items.join("")
 	 	//  }).appendTo( ".home-screen-pics" );
 	});
+
+	// items.length
+
+	function arrayLength(arr){
+		return arr.length;
+	}
+
+	function makeArrays(arr, len){
+		var blank = [];
+		for(var i = 0; i < len; i++){
+			arr.push(blank);
+		}
+		console.log(arr);
+	}
 
 
 	var img = document.createElement('img');
@@ -123,7 +132,7 @@ $(document).ready(function(){
 		welcomeUser(current_user);
 
 
-	$(".user").append(pictureArray).appendTo("<div class='home-screen-pics'></div>");
+	// $(".user").append(pictureArray).appendTo("<div class='home-screen-pics'></div>");
 
 
 
