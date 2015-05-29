@@ -59,10 +59,12 @@ $(document).ready(function(){
 
 	  items = [];
 	  $.each( data, function( key, val ) {
+	    items.push("<div>");
 	    items.push( "<img id='" + key + "' " + "src='"+ val + "'>");
 	    items.push("<div class='likeBox'><div class='likeIcon'></div></div>");
 	  	items.push("<div class='comment_display'></div>");
 	  	items.push("<input class='comment_input'/><button name='Submit' value='Submit' class='comment_button' data-value='" + key + "'/>");
+	  	items.push("</div>");
 	  // console.log(items[key]);
 	  });
 	  	makeArrays(commentsArray, data.length);
@@ -89,9 +91,13 @@ $(document).ready(function(){
 		comment_text.innerHTML = x;
 		console.log(x);
 		// var el = document.getElementsByClassName('.comment_display');
-		console.log($(this).data('value'));
+		console.log("data" +$(this).data('value'));
 		// var y = this.closest(el);
 		// $(this).x.append(y);
+		
+		//$(this).data('value')
+
+		//this code will display comments to all pictures
 		$(this).prev().siblings('.comment_display').empty().append(x);
 		$('.comment_input').val('');
 	  });
