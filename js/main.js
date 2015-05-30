@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var items;
 	var commentsArray = [];
 
-	var current_user = document.cookie; 
+	var current_user = document.cookie;
 
 	$(".login").on('click',function(e){
 		username = $('#user').val().toLowerCase();
@@ -108,13 +108,13 @@ $(document).ready(function(){
 
 
 
-	function makeArrays(arr, len){
-		var blank = [];
-		for(var i = 0; i < len; i++){
-			arr.push(blank);
-		}
-		console.log(arr);
-	}
+	// function makeArrays(arr, len){
+	// 	var blank = [];
+	// 	for(var i = 0; i < len; i++){
+	// 		arr.push(blank);
+	// 	}
+	// 	console.log(arr);
+	// }
 
 
 	var img = document.createElement('img');
@@ -123,7 +123,7 @@ $(document).ready(function(){
 			img.src = 'images/alex.jpeg';
 			document.getElementById('img_div').appendChild(img);
 		} else if (user == "david"){
-			img.src = 'images/david.jpeg';
+			img.src = 'images/david.png';
 			document.getElementById('img_div').appendChild(img);
 		}
 		else if (user == "mariano"){
@@ -157,16 +157,7 @@ $(document).ready(function(){
 		welcomeUser(current_user);
 
 		$('body').on('dblclick','img', function(){
-				//console.log($(this), "This");
-				//console.log($(this).siblings('.likeBox').children());
 				$(this).siblings('.likeBox').children().toggleClass('likeIcon2');
-			// 	if($('.likeIcon').css('background-color','grey')){
-			// 	$('.likeIcon').addClass('background-color','red');
-			// }
-				
-			// 	else if($('.likeIcon').addClass('background-color','red')) {
-			// 		$('.likeIcon').css('background-color','grey');
-			// 	}
 		});
 
 

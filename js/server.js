@@ -14,14 +14,14 @@ http.createServer(function(request, response){
 	console.log(request.url);
 	fs.readFile('index.html', function(error, contents){
 		if(error){
-			console.error(error, "!!!!");
+			console.error(error, "!!!!<(O_o)>");
 		}
 		console.log(typeof contents, "contents");
 		response.write(contents);
 
 		response.end();
 		});
-	} 	else {
+	} 	else {       // use __dirname instead of ./
 	fs.readFile('./' + request.url, function(error, contents){
 		if(error){
 			console.error(error, "!!!!");
