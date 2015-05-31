@@ -7,11 +7,7 @@ html, body, h1, h2, h3, h4, ul, ol, li, p, a {
 body {
 	line-height: 20px;
 }
-/*@font-face {
-	font-family: Billabong;
-	src: url("billabong.ttf");
-}
-*/
+
 .loginBox{
 	margin: 0 auto;
 	margin-top: 200px;
@@ -35,8 +31,6 @@ header {
 	font-size: 18px;
 	font-family: 'Grant Hotel', cursive;
 	color: white;
-	/*background: url("https://instagramstatic-a.akamaihd.net/bluebar/660508e/images/branding/new-logo.png") no-repeat 0 0;*/
-	/*box-shadow: 0 -1px 0 #06365f inset, 0 1px 0 rgba(255,255,255, .2).inset;*/
 }
 
 .userName {
@@ -47,10 +41,6 @@ header {
 .password {
 	display:inline-block;
 
-}
-
-#user {
-	/*padding: 11px */
 }
 
 .fields{
@@ -67,12 +57,20 @@ header {
 	/*margin-top: 20px;*/
 }
 
-.forgot-pw {
-
-}
-
 .login {
 	margin-left: 75px;
+	background-color: #6bb38a;
+	background-image: -webkit-linear-gradient(top,#6bb38a,#3d8b5f);
+	background-position: 50% 50%;
+  text-shadow: 0 1px 1px #1e693f;
+  color: #fff;
+  border-radius: 3px;
+  padding: 7px 10px 8px 10px;
+  line-height: 1em;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  border: 1px solid #3d8b5f;
+  cursor: pointer;
+  
 }
 
 .account {

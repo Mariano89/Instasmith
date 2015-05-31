@@ -23,12 +23,6 @@ $(document).ready(function(){
 		}();
 	});
 	
-	// $('.test').on('click', function(){
-	// 	console.log(document.cookie, "cookie");
-	// 	console.log("current user", current_user);
-	// });
-
-
 
 	var users = {
 		travis: {
@@ -67,10 +61,10 @@ $(document).ready(function(){
 	  	items.push("</div>");
 	  // console.log(items[key]);
 	  });
-	  	makeArrays(commentsArray, data.length);
+	  	// makeArrays(commentsArray, data.length);
 	  	
 
-	  	console.log(commentsArray);
+	  	// console.log(commentsArray);
 	 $('<ul class="my-new-list"></ul>').append(items.join("")).appendTo('.home-screen-pics');
 	 
 
