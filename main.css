@@ -45,14 +45,33 @@ header {
 	color: white;
 }
 
-.userName {
-	display:inline;
-	text-align: center;	
+.userName, .password{
+	display: inline;
 }
 
-.password {
-	display:inline-block;
+#user, #pw {
+	display:inline;
+	width: 65%;
+	/*float: left;*/
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 3px;
+	padding: 9px 8px 7px;
+	line-height: normal;
+	margin: 0 auto;
+	vertical-align: baseline;
+}
 
+form {
+	margin: 0 auto;
+}
+
+form p {
+	margin-bottom: 10px;
+}
+
+p {
+	margin: 0 0 10px;	
 }
 
 .fields{
