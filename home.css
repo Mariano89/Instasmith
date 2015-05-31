@@ -5,7 +5,7 @@ html, body, h1, h2, h3, h4, ul, ol, li, p, a {
  }
 
  body{
- 	background-color: #dedfe0;
+ 	background-color: #f7f8fa;
  }
 
  .home-header{
@@ -24,9 +24,7 @@ html, body, h1, h2, h3, h4, ul, ol, li, p, a {
 
 }
 
-
-
- .my-new-list img{
+.my-new-list img{
  	display: block;
  	margin: 0 auto;
  	border: 5px solid gray;
